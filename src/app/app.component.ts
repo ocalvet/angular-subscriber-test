@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DogsService } from './dogs.service';
+import { Dog } from './Dog';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,7 @@ import { DogsService } from './dogs.service';
 })
 export class AppComponent {
   title = 'angular-subscriber-test';
-  dog: any;
+  dog: Dog;
   constructor(private _dogs: DogsService) {
    this.getDog();
   }

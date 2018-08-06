@@ -1,6 +1,6 @@
-<div *ngIf="!dog || dog.status !== 'success'">No Dog yet</div>
-<div *ngIf="dog && dog.status === 'success'">
+<div *ngIf="!dog">No Dog yet</div>
+<div *ngIf="dog">
   <h1>Got a dog</h1>
-  <img [src]="dog.message" alt="dog image" style="width: 200px; height: 200px;" />
+  <img [src]="dog.imageUrl" alt="dog image" style="width: 200px; height: 200px;" />
 </div>
 <button (click)="getDog()">Get a Dog</button>
