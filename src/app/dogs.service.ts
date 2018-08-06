@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Http } from '@angular/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DogsService {
 
-  constructor(private _http: HttpClient) { }
+  constructor(private _http: Http) { }
 
   get() {
     return this._http.get('https://dog.ceo/api/breeds/image/random');

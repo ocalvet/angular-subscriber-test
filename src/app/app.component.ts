@@ -18,7 +18,12 @@ export class AppComponent {
       ._dogs
       .get()
       .subscribe(d => {
+        console.log('Got a dog', d);
         this.dog = d;
+      }, (error) => {
+        console.log('ERROR', error);
+      }, () => {
+        console.log('Completed');
       });
   }
 }
